@@ -1,0 +1,115 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nartix_YT - Créateur de Contenu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Nartix_YT</h1>
+            <div class="space-x-4">
+                <a href="#about" class="hover:text-gray-300">À propos</a>
+                <a href="#journey" class="hover:text-gray-300">Parcours</a>
+                <a href="#youtube" class="hover:text-gray-300">YouTube</a>
+                <a href="#services" class="hover:text-gray-300">Services</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4">Nartix_YT</h1>
+            <p class="text-xl">Développeur Web | Designer | Créateur de Contenu</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-4">
+        <section id="about" class="mb-16 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold mb-6">À propos de moi</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Je suis Nartix_YT, un créateur de contenu passionné qui combine mes compétences de développeur web et de designer pour créer des expériences en ligne uniques et engageantes.
+            </p>
+        </section>
+
+        <section id="journey" class="mb-16 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold mb-6">Mon Parcours</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Depuis mon plus jeune âge, j'ai toujours été fasciné par la technologie et l'art numérique. J'ai commencé à développer des sites web et des applications dès l'adolescence, tout en explorant ma créativité à travers la conception graphique et la vidéo.
+            </p>
+        </section>
+
+        <section id="youtube" class="mb-16 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold mb-6">Ma Chaîne YouTube</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Aujourd'hui, je mets mon expertise au service de ma chaîne YouTube où je partage mes conseils, mes tutoriels et mes projets avec une communauté grandissante. Mon objectif est d'inspirer et d'aider les autres à développer leurs propres compétences créatives et techniques.
+            </p>
+        </section>
+
+        <section id="services" class="mb-16 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold mb-6">Services Freelance</h2>
+            <p class="text-gray-700 leading-relaxed">
+                En dehors de ma chaîne, je travaille également en tant que développeur freelance et designer pour des clients de tous horizons. J'adore relever de nouveaux défis et collaborer avec des personnes passionnées comme moi.
+            </p>
+        </section>
+
+        <section id="contact" class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold mb-6">Me Contacter</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- YouTube -->
+                <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <button onclick="window.open('https://www.youtube.com/@Nartix_YTB', '_blank')" 
+                       class="w-full flex flex-col items-center justify-center p-6 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300 cursor-pointer">
+                        <i class="fab fa-youtube text-4xl mb-3"></i>
+                        <span class="font-bold">YouTube</span>
+                        <span class="mt-2">@Nartix_YTB</span>
+                    </button>
+                </div>
+                
+                <!-- TikTok -->
+                <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <button onclick="window.open('https://www.tiktok.com/@nartix_ytb', '_blank')"
+                       class="w-full flex flex-col items-center justify-center p-6 bg-black text-white rounded-lg hover:bg-gray-900 transition duration-300 cursor-pointer">
+                        <i class="fab fa-tiktok text-4xl mb-3"></i>
+                        <span class="font-bold">TikTok</span>
+                        <span class="mt-2">@nartix_ytb</span>
+                    </button>
+                </div>
+                
+                <!-- Email -->
+                <div class="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <button onclick="window.location.href='mailto:nartix.officialytb@gmail.com'"
+                       class="w-full flex flex-col items-center justify-center p-6 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 cursor-pointer">
+                        <i class="fas fa-envelope text-4xl mb-3"></i>
+                        <span class="font-bold">Gmail</span>
+                        <span class="mt-2 text-sm">nartix.officialytb@gmail.com</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Nartix_YT. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const onclickAttr = this.getAttribute('onclick');
+                    if (onclickAttr) {
+                        eval(onclickAttr);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
